@@ -6,10 +6,11 @@ const cors = require('cors');
 const PORT = 8000;
 const cookieParser = require('cookie-parser');
 
-const authRoutes = require('./Routes/Auth');//done
-const adminRoutes = require('./Routes/Admin');//done
+const authRoutes = require('./Routes/Auth');
+const adminRoutes = require('./Routes/Admin');
+const UploadeFoodImagetoApi = require('./Routes/UploadeFoodImagetoApi');
+const UploadeBodyImagetoApi = require('./Routes/UploadeBodyImagetoApi');
 const calorieIntakeRoutes = require('./Routes/CalorieIntake');//not done
-const UploadeFoodImagetoApi = require('./Routes/UploadeFoodImagetoApi');//not done
 const sleepTrackRoutes = require('./Routes/SleepTrack');//not done
 const stepTrackRoutes = require('./Routes/StepTrack');//not done
 const weightTrackRoutes = require('./Routes/WeightTrack');//not done
@@ -17,8 +18,6 @@ const waterTrackRoutes = require('./Routes/WaterTrack');//not done
 const workoutTrackRoutes = require('./Routes/WorkoutTrack');//not done
 const workoutRoutes = require('./Routes/WorkoutPlans');//not done
 const reportRoutes = require('./Routes/Report');//not done
-const UploadeImagetoApi = require('./Routes/UploadeImagetoApi');
-const UploadeBodyImagetoApi = require('./Routes/UploadeBodyImagetoApi');
 
 require('dotenv').config();
 require('./db')
