@@ -18,6 +18,7 @@ const workoutTrackRoutes = require('./Routes/WorkoutTrack');//not done
 const workoutRoutes = require('./Routes/WorkoutPlans');//not done
 const reportRoutes = require('./Routes/Report');//not done
 const UploadeImagetoApi = require('./Routes/UploadeImagetoApi');
+const UploadeBodyImagetoApi = require('./Routes/UploadeBodyImagetoApi');
 
 require('dotenv').config();
 require('./db')
@@ -44,6 +45,7 @@ app.use('/auth', authRoutes);
 app.use('/calorieintake', calorieIntakeRoutes);
 app.use('/admin', adminRoutes);
 app.use('/image-upload', imageUploadRoutes);
+app.use('/upload-bodyimage-api', UploadeBodyImagetoApi);
 app.use('/upload-foodimage-api', UploadeFoodImagetoApi);
 app.use('/sleeptrack', sleepTrackRoutes);
 app.use('/steptrack', stepTrackRoutes);
