@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser');
 const authRoutes = require('./Routes/Auth');//done
 const adminRoutes = require('./Routes/Admin');//done
 const calorieIntakeRoutes = require('./Routes/CalorieIntake');//not done
-const imageUploadRoutes = require('./Routes/imageUploadRoutes');//not done
+const UploadeFoodImagetoApi = require('./Routes/UploadeFoodImagetoApi');//not done
 const sleepTrackRoutes = require('./Routes/SleepTrack');//not done
 const stepTrackRoutes = require('./Routes/StepTrack');//not done
 const weightTrackRoutes = require('./Routes/WeightTrack');//not done
@@ -44,7 +44,7 @@ app.use('/auth', authRoutes);
 app.use('/calorieintake', calorieIntakeRoutes);
 app.use('/admin', adminRoutes);
 app.use('/image-upload', imageUploadRoutes);
-app.use('/upload-image-api', UploadeImagetoApi);
+app.use('/upload-foodimage-api', UploadeFoodImagetoApi);
 app.use('/sleeptrack', sleepTrackRoutes);
 app.use('/steptrack', stepTrackRoutes);
 app.use('/weighttrack', weightTrackRoutes);
