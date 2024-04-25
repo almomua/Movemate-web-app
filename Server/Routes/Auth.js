@@ -96,6 +96,21 @@ router.post('/login', async (req, res, next) => {
         next(err);
     }
 })
+router.get('/getuserById', authTokenHandler, async (req, res, next) => {
+    try {
+        const { _id } = req.body;
+        const user = await User.findOne({ _id });
+        if (!user) {
+            return res.status(400).json(createResponse(false, 'Invalid credentials'));
+        }
+        else{
+           return res.status(200).json(createResponse(true, 'userdata', {user}));
+        }
+    }
+    catch (err) {
+        next(err);
+    }
+})
 router.post('/sendotp', async (req, res) => {
     try {
         const { email } = req.body;
