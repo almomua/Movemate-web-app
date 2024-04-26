@@ -19,7 +19,7 @@ router.post('/upload', upload.single('file'), async (req, res) => {
         formData.append('file',newBlob,req.file.originalname)
         // console.log(newBlob);
         // console.log(formData);
-        const response = await axios.post('https://twolface-foodmodel.hf.space/predict', formData,{
+        const response = await axios.post('https://twolface-foodmodel.hf.space/predictFood', formData,{
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
