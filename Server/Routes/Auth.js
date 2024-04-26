@@ -98,8 +98,8 @@ router.post('/login', async (req, res, next) => {
 })
 router.get('/getuserById', authTokenHandler, async (req, res, next) => {
     try {
-        const { _id } = req.body;
-        const user = await User.findOne({ _id });
+        const userId = req.userId;
+        const user = await User.findById({ _id: userId });
         if (!user) {
             return res.status(400).json(createResponse(false, 'Invalid credentials'));
         }
