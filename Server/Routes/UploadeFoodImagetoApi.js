@@ -27,8 +27,9 @@ router.post('/upload', upload.single('file'), async (req, res) => {
         })
     
         // Handle API response as needed
-        console.log(response.data.calories);
-        res.send('File uploaded successfully to cloud API');
+        // console.log(response.data.calories);
+        // res.send('File uploaded successfully to cloud API');
+         res.json({ok : true , massage :'File uploaded successfully to cloud API', data : response.data });
     } catch (error) {
         console.error('Error uploading file to cloud API:', error);
         res.status(500).send('Failed to upload file to cloud API');
