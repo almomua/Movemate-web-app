@@ -1,0 +1,104 @@
+.food-section{
+    height: 90vh;
+    margin-top: 9vh;
+    background-color: #e8dec4 ;
+}
+.plate-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #C0D6DF;
+    margin-left: 50px;
+    border: 2px solid #4F6D7A;
+    border-radius: 20px;
+    margin: auto;
+
+}
+
+.plate {
+    margin: 15px;
+    cursor: pointer;
+
+}
+
+
+.plate img {
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.plate.selected img {
+    border-color: #DD6E42; 
+}
+.plate1 img{
+    width: 100px;
+    height: 100px;
+}
+.plate2 img{
+    width: 110px;
+    height: 110px;
+}
+.plate3 img{
+    width: 120px;
+    height: 120px;
+}
+.plate-container p{
+    text-align: center;
+    color: #4F6D7A;
+}
+
+#photo-container{
+    width: 300px;
+    height: 200px;
+    background-color: #C0D6DF;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    margin: auto;
+    border-radius: 15px;
+}
+.overlay{
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+}
+#photo-container input{
+    width: 100%;
+    height: 100%;
+    inset: 0;
+
+}
+.next-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.next-btn{
+    width: 120px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #DD6E42;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 30px;
+
+}
+.plate img {
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+input[type=radio]:checked + label .plate img{
+    border-color: #DD6E42;
+}

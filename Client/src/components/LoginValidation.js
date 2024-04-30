@@ -12,10 +12,10 @@ function validation(values) {
         errors.password = "Password must be 8 or more characters";
     }else if (!/\d/.test(values.password)) {
         errors.password = "Password must contain atleast 1 number";
-    } else if (!/[!@#$%&?]/g.test(values.password)) {
-        errors.password = "Password must contain atleast 1 special character";
-    } else if (!/[A-Z]/g.test(values.password)) {
-        errors.password = "Password must contain atleast 1 capitol letter";
+    // } else if (!/[!@#$%&?]/g.test(values.password)) {
+    //     errors.password = "Password must contain atleast 1 special character";
+    // } else if (!/[A-Z]/g.test(values.password)) {
+    //     errors.password = "Password must contain atleast 1 capitol letter";
     }
 
     return errors;

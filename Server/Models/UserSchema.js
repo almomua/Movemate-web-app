@@ -20,11 +20,11 @@ const userSchema = new mongoose.Schema({
         {
             weight: {
                 type: Number,
-                required: true,
+                required: false,
             },
             date: {
                 type: Date,
-                required: true,
+                required: false,
             },
         }
     ],
@@ -32,25 +32,25 @@ const userSchema = new mongoose.Schema({
         {
             height: {
                 type: Number,
-                required: true,
+                required: false,
             },
             date: {
                 type: Date,
-                required: true,
+                required: false,
             },
         }
     ],
     gender: {
         type: String,
-        required: true,
+        required: false,
     },
     dob: {
         type: String,
-        required: true,
+        required: false,
     },
     goal: {
         type: String,
-        required: true,
+        required: false,
     },
     calorieIntake: [
         {
@@ -62,40 +62,40 @@ const userSchema = new mongoose.Schema({
 
             item: {
                 type: String,
-                required: true,
+                required: false,
             },
             date: {
                 type: Date,
-                required: true,
+                required: false,
             },
             quantity: {
                 type: Number,
-                required: true,
+                required: false,
             },
             quantitytype: {
                 type: String,
-                required: true,
+                required: false,
             },
             calorieIntake: {
                 type: Number,
-                required: true,
+                required: false,
             },
 
         }
     ],
     activityLevel: {
         type: String,
-        required: true,
+        required: false,
     },
     sleep: [
         {
             date: {
                 type: Date,
-                required: true,
+                required: false,
             },
             durationInHrs: {
                 type: Number,
-                required: true,
+                required: false,
             },
         },
     ],
@@ -103,11 +103,11 @@ const userSchema = new mongoose.Schema({
         {
             date: {
                 type: Date,
-                required: true,
+                required: false,
             },
             steps: {
                 type: Number,
-                required: true,
+                required: false,
             },
         },
     ],
@@ -115,15 +115,15 @@ const userSchema = new mongoose.Schema({
         {
             date: {
                 type: Date,
-                required: true,
+                required: false,
             },
             exercise: {
                 type: String,
-                required: true,
+                required: false,
             },
             durationInMinutes: {
                 type: Number,
-                required: true,
+                required: false,
             },
         },
     ],
@@ -131,11 +131,11 @@ const userSchema = new mongoose.Schema({
         {
             date: {
                 type: Date,
-                required: true,
+                required: false,
             },
             amountInMilliliters: {
                 type: Number,
-                required: true,
+                required: false,
             },
         },
     ],

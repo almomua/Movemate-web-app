@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'shekoharby23@gmail.com',
-        pass: 'SHE343##@HARBY323_..._2002'
+        pass: '************'
     }
 })
 
@@ -91,6 +91,21 @@ router.post('/login', async (req, res, next) => {
             authToken,
             refreshToken
         }));
+    }
+    catch (err) {
+        next(err);
+    }
+})
+router.get('/getuserById', authTokenHandler, async (req, res, next) => {
+    try {
+        const userId = req.userId;
+        const user = await User.findById({ _id: userId });
+        if (!user) {
+            return res.status(400).json(createResponse(false, 'Invalid credentials'));
+        }
+        else{
+           return res.status(200).json(createResponse(true, 'userdata', {user}));
+        }
     }
     catch (err) {
         next(err);

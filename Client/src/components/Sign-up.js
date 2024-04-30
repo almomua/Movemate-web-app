@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './Sign-up.css';
 import { Link } from 'react-router-dom';
 import validation from './SignupValidation';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Navigate } from 'react-router-dom';
 
 
 
@@ -14,17 +18,64 @@ function Signup(){
         confirmPassword:''
     })
     const[errors,setErrors]=useState({})
+    const [serverError, setServerError] = useState('');
+    const [createUser, setCreateUser] = useState(false);
+
 
     const handleInput=(event)=>{
-        setvalues(prev =>({...prev,[event.target.name]:[event.target.value]}))
+        setvalues(prev =>({...prev,[event.target.name]:event.target.value}))
 
     }
 
-    const handleSubmit=(event)=>{
-        event.preventDefault();
+    async function handleSubmit  (e)  {
+        e.preventDefault();
         setErrors(validation(values));
-        console.log("Errors:", errors);
+        try{
+            const res = await axios.post('http://localhost:8000/auth/register' , values);
+            console.log(res.data.message);
+            console.log(res);
+            setCreateUser(true);
+            toast.success("Created Account successfully!");
+    
+        }catch(err){
+
+            if (err.response.status){
+                setServerError(err.response.data.message);
+                console.log(err.response.data.message);
+                console.log(err.response);
+            }
+
+            // if (err.response.status === 400) {
+            // setServerError(err.response.data.message);
+            // console.log(err.response.data.message);
+            // } else {
+            //     setServerError(err.response.data.message);
+            //     console.log(err.response.data.message);
+            // // setErrors('internal server error');
+            // }
+        }
+    
     }
+
+    if (createUser) {
+        return <Navigate to="/home" />;
+    }
+
+    // const handleSubmit= async (event)=>{
+    //     event.preventDefault();
+    //     setErrors(validation(values));
+
+    //     try {
+    //         // Make POST request to your backend API
+    //         const response = await axios.post('http://localhost:8000/auth/register', values);
+
+    //         // Handle response (e.g., show success message, redirect user)
+    //         console.log("Response:", response.data);
+    //     } catch (error) {
+    //         // Handle error (e.g., show error message)
+    //         console.error("Error:", error.response.data);
+    //     }
+    // }
 
     return(
         <>
@@ -61,6 +112,7 @@ function Signup(){
                     
                         <div class="d-grid gap-2 mb-2">
                             <button class="btn btn-lg signup-button" type="submit" value="submit" id="btnn">Register</button>
+                            {serverError && <p className="text-danger">{serverError}</p>}
                         </div>
                         <div >
                             <p class='mb-2'> Already Have An Account?</p>
