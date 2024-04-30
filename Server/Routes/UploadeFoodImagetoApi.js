@@ -17,6 +17,7 @@ router.post('/upload', upload.single('file'), async (req, res) => {
         const fileBuffer = req.file.buffer;
         const newBlob = new Blob([fileBuffer],{type:req.file.mimetype});
         formData.append('file',newBlob,req.file.originalname)
+        formData.append('plate',req.body.plate)
         // console.log(newBlob);
         // console.log(formData);
         const response = await axios.post('https://twolface-foodmodel.hf.space/predictFood', formData,{
