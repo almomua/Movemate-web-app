@@ -7,6 +7,7 @@ import Food from './components/Food/Food';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Fraction from './components/Food/Fraction';
+import Diet from './components/Diet/Diet';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/food' element={<Food />} />
           <Route path='/fraction' element={<Fraction />} />
+          <Route path='/diet' element={<Diet />} />
         </Routes>
       </BrowserRouter>
     </div>

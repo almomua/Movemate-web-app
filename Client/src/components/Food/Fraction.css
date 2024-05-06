@@ -25,16 +25,16 @@
 }
 
 
-.fraction img {
+.pp-img {
   border-radius: 50%;
   border: 2px solid transparent;
   width: 100px;
   height: 100px;
 }
 
-.fraction.selected img {
+/* .fraction.selected img {
   border-color: #DD6E42; 
-}
+} */
 .fraction-container p{
   text-align: center;
   color: #4F6D7A;
@@ -47,7 +47,7 @@ h4{
   margin-top: 10px;
 
 }
-button{
+.arrow-button{
   position: absolute;
   top: 10px;
   right: 10px;
@@ -69,4 +69,9 @@ input[type=radio]:checked + label .fraction img{
 }
 .space{
   height: 2px;
+}
+.button-disapear{
+  color: #DD6E42 !important;
+  /* background-color: #fff !important; */
+
 }
