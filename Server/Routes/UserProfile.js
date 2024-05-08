@@ -28,7 +28,12 @@ router.put('/quiz', authTokenHandler, async (req, res, next) => {
                 goal,
                 activityLevel
             });
-
+             // 22222222222222222222222222222222222222
+            // user.gender = gender;
+            // user.dob = dob;
+            // user.goal = goal;
+            // user.activityLevel = activityLevel;
+            // 222222222222222222222222222222222222222
         await user.save();
 
         res.status(201).json(createResponse(true, 'data saved successfully', {user}));
