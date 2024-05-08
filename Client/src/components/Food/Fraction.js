@@ -21,7 +21,7 @@ function Fraction({props}){
     const[arrayPlate,setArrayPlate]=useState([]);
     const [isInputDisabled, setIsInputDisabled] = useState(false);
     const [tableVisible, setTableVisible] = useState(false);
-    // console.log(arrayPlate);
+    console.log(arrayPlate);
     // console.log('data from fraction=',props.data)
     const [totals, setTotals] = useState({
         totalCalories: 0,
@@ -36,7 +36,16 @@ function Fraction({props}){
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex => currentIndex - 1);
             setIsInputDisabled(false);
+            // setArrayPlate(arrayPlate.slice(0, -1));
+
+            // Check if it's the last index and arrayPlate is full
+        if (currentIndex === foodItems.length - 1 && arrayPlate.length === foodItems.length) {
+            // Remove two items from the arrayPlate
+            setArrayPlate(arrayPlate.slice(0, -2));
+        } else {
+            // Remove one item from the arrayPlate
             setArrayPlate(arrayPlate.slice(0, -1));
+        }
         }
     
         if (currentIndex === 1) {
@@ -44,9 +53,6 @@ function Fraction({props}){
             //make the arrayPlate empty because while testing the first value still in the array and did not delete
             setArrayPlate([]); 
         }
-        // if (currentIndex === 0) {
-        //     setArrayPlate([]); 
-        // }
     };
 
 
