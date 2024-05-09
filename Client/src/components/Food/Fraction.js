@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import './Fraction.css'
 import { GrFormNextLink } from "react-icons/gr";
 import { GrFormPreviousLink } from "react-icons/gr";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import Plate6 from '../imgs/Plate6.jpg'
 import Plate2 from '../imgs/Plate2.jpg'
 import Plate4 from '../imgs/Plate4.jpg'
@@ -155,7 +155,7 @@ function Fraction({props}){
 
     return(
         <>
-        <Navbar />
+        {/* <Navbar /> */}
         <section className="fraction-section">
                 
                 <div className="space"></div>

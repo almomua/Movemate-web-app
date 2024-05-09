@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,326 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  }
+  
+  
+  .navbar {
+    background-color: #4F6D7A;
+  z-index: 1;
+  }
+  
+  body{
+  background-color: #F2EBE4;
+  height: 500px ;
+  background-repeat: no-repeat;
+  }
+  
+  .home{
+  background-image: url("../public/_methode_times_prod_web_bin_05c5e8c4-ef5d-11ed-b02d-cefaa3091195.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* filter: blur(3px); */
+  }
+  
+  .homeLayer{
+  background-color: rgba(0,0,0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  }
+  
+  
+  .navbar .navbar-brand img{
+  
+  width: 150px;
+  }
+  .typingClass::after{
+    content: "";
+    animation-name:typingSkill;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+  }
+  @keyframes typingSkill{
+  
+  2%{content:"H|";}
+  4%{content:"He|";}
+  6%{content:"Hea|";}
+  8%{content:"Heal|"}
+  10%{content:"Healt|"}
+  12%{content:"Health|"}
+  14%{content:"Health |"}
+  16%{content:"Health H|"}
+  18%{content:"Health Hu|"}
+  20%{content:"Health Hub|"}
+  22%{content:"Health Hu|"}
+  24%{content:"Health H|"}
+  26%{content:"Health |"}
+  28%{content:"Health|"}
+  30%{content:"Healt|"}
+  32%{content:"Heal|"}
+  34%{content:"Hea|"}
+  36%{content:"He|"}
+  38%{content:"H|"}
+  40%{content:"|";}
+  42%{content:"";}
+  }
+  .about,.food{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .about-img{
+  float: left;
+  
+  }
+  
+  .about-img img ,.food-img img{
+  border-radius: 30%;
+  }
+  
+  .about-caption{
+  float: left;
+  margin-left: 10%;
+  margin-top: 5%;
+  }
+  .food-caption{
+    float: left;
+    margin-right: 10%;
+    margin-top: 5%;
+  }
+  
+  .clr{
+    clear: both;
+  }
+  
+  h2{
+    font-size: 32px;
+  }
+  p{
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  .image-uploader {
+    margin-bottom: 20px;
+  }
+  
+  
+  .image-uploader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .file-input {
+    margin-bottom: 10px;
+    color: #e0e0e0;
+  }
+  
+  .upload-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .upload-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .calory{
+    width: 100%;
+  }
+  
+  .body-img{
+    float: left;
+    width: 30%;
+   
+  }
+  
+  .body-img img{
+    border-radius: 30%;
+    width:100%;
+    max-height: 70vh;
+  
+  }
+  
+  
+  .padding {
+    padding: 3rem !important
+  }
+  
+  .user-card-full {
+    overflow: hidden;
+  }
+  
+  .card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    border: none;
+    margin-bottom: 30px;
+  }
+  
+  .m-r-0 {
+    margin-right: 0px;
+  }
+  
+  .m-l-0 {
+    margin-left: 0px;
+  }
+  
+  .user-card-full .user-profile {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .bg-c-lite-green {
+      background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
+    background: linear-gradient(to right, #ee5a6f, #f29263);
+  }
+  
+  .user-profile {
+    padding: 20px 0;
+  }
+  
+  .card-block {
+    padding: 1.25rem;
+  }
+  
+  .m-b-25 {
+    margin-bottom: 25px;
+  }
+  
+  .img-radius {
+    border-radius: 5px;
+  }
+  
+  
+  
+  h6 {
+    font-size: 14px;
+  }
+  
+  .card .card-block p {
+    line-height: 25px;
+  }
+  
+  @media only screen and (min-width: 1400px){
+  p {
+    font-size: 14px;
+  }
+  }
+  
+  .card-block {
+    padding: 1.25rem;
+  }
+  
+  .b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .m-b-20 {
+    margin-bottom: 20px;
+  }
+  
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+  
+  .card .card-block p {
+    line-height: 25px;
+  }
+  
+  .m-b-10 {
+    margin-bottom: 10px;
+  }
+  
+  .text-muted {
+    color: #919aa3 !important;
+  }
+  
+  .b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .f-w-600 {
+    font-weight: 600;
+  }
+  
+  .m-b-20 {
+    margin-bottom: 20px;
+  }
+  
+  .m-t-40 {
+    margin-top: 20px;
+  }
+  
+  .p-b-5 {
+    padding-bottom: 5px !important;
+  }
+  
+  .m-b-10 {
+    margin-bottom: 10px;
+  }
+  
+  .m-t-40 {
+    margin-top: 20px;
+  }
+  
+  .user-card-full .social-link li {
+    display: inline-block;
+  }
+  
+  .user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .maleChoice , .femaleChoice , .Box , .image-uploader{
+    float: left;
+  }
+  
+  .body-gender{
+  background-image: url("../public/_methode_times_prod_web_bin_05c5e8c4-ef5d-11ed-b02d-cefaa3091195.jpg");
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
+  
+  .body-gender-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .bg-black{
+  
+  opacity:60% ;
+  
+  
+  }
+  
+  .content{
+    position: absolute;
+    z-index: 9;
+  
+  
+  }
+

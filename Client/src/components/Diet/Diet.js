@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import './Diet.css';
 import female from '../imgs/female.jpeg'
 import male from '../imgs/male.jpeg'
@@ -80,7 +80,7 @@ function Diet(){
 
     return(
         <>
-            <Navbar/>
+            {/* <Navbar/> */}
             <section className="back-page">
                 <div className="container diet-section">
 

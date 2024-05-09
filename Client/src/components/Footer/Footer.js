@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
     <>
-    <footer class="footer">
+    <footer className="footer bottom">
         <div class="container">
             <div class="col text-center">
                 <h3>MoveMate</h3>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "../Footer/Footer";
 import './Food.css';
 import platephoto from '../imgs/platephoto.jpeg';
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import { FaUpload } from "react-icons/fa6";
 import detection from '../imgs/detection.jpeg'
 import { GrFormNextLink } from "react-icons/gr";
@@ -109,7 +109,7 @@ function Food(){
 
     return(
         <>
-        <Navbar />
+        {/* <Navbar /> */}
         {!data?(
                     <section className="food-section position-relative">
                     <h3  style={{color: '#4F6D7A'}}>Enjoy your meal<FaHandHoldingHeart style={{ marginLeft: '0.5rem', marginBottom:'0.5rem' }}/></h3>
@@ -184,7 +184,7 @@ function Food(){
         ):(<Fraction props={data}/>)}
 
 
-            <Footer />
+        
         </>
     );
 }

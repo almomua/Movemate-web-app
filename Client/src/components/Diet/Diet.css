@@ -1,22 +1,18 @@
 .diet-section{
-    /* height: 90vh; */
     margin-top: 9vh;
-    /* background-color: #C0D6DF; */
 }
 .sml-input{
     width: 300px !important;
     margin: 0 auto;
 }
 .back-page{
-    /* background-color: #C0D6DF; */
-    /* background-color: #e1dcce; */
+
 
     margin: 0;
     padding: 0;
 }
 .btnDiet{
     width: 300px;
-    /* background-color: #4F6D7A; */
 }
 .done-button{
     border: none;
