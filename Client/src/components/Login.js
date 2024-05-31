@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
+
 function Login(){
 
     const [values, setvalues]=useState({
@@ -99,7 +100,7 @@ function Login(){
     };
 
     if (loggedIn) {
-        return <Navigate to="/home" />;
+        return <Navigate to="/guest" />;
     }
 
     return(
@@ -126,7 +127,7 @@ function Login(){
                             <button class="btn btn-lg login-button" type="submit" value="submit" id="btnn">Log in</button>
                             {serverError && <p className="text-danger">{serverError}</p>}
                         </div>
-                        <div >
+                        <div  className='text-center'>
                             <p class='mb-3'> Not A Member?</p>
                             <Link to="/signup" type="button" class="btn btn-link btn-sm btn-outline-light signup-link">Sign Up Now <FaArrowRight /></Link>
                         </div>

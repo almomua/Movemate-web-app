@@ -15,6 +15,7 @@ const Body = () => {
     console.log(selectedFile);
 
   };
+  
 
 
 
@@ -45,7 +46,8 @@ const Body = () => {
   };
 
   return <>
-  <div className="about">
+  <div className='body-container'>
+  <div className="about-body" >
 
 
             <div className="body-img">
@@ -73,7 +75,8 @@ const Body = () => {
             {data&&(
                 <div className=" w-50 about-caption">
                 <h2>Discover your body fat percentage:</h2>
-                <p>{data.result}</p>
+                <p>{data.data.result}</p>
+                {console.log(data)}
                 </div>
     
             )}
@@ -92,7 +95,7 @@ const Body = () => {
                     </div>
 
 
-            <div className="body-gender w-50  m-auto bg-light mt-5 mb-5 d-flex justify-content-center">
+            <div className="body-gender w-50  m-auto bg-light mt-5 mb-1 d-flex justify-content-center">
             <div className="content d-flex justify-content-center m-auto mt-5 ">
     <div className="image-uploader mt-5">
       <input
@@ -136,6 +139,7 @@ const Body = () => {
     
                                 </div>
                                   </div>
+</div>
 
 {console.log(process.env)}
 

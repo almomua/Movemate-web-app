@@ -114,7 +114,7 @@ function Signup(){
                             <button class="btn btn-lg signup-button" type="submit" value="submit" id="btnn">Register</button>
                             {serverError && <p className="text-danger">{serverError}</p>}
                         </div>
-                        <div >
+                        <div  className='text-center'>
                             <p class='mb-2'> Already Have An Account?</p>
                             <Link to="/login" type="button" class="btn btn-link btn-sm btn-outline-light login-link">Log in</Link>
                         </div>

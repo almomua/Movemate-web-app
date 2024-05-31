@@ -38,7 +38,7 @@ const Profile = () => {
 
 return <>
 
-<div className="page-content page-container" id="page-content">
+<div className="page-content page-container" id="page-content" style={{backgroundColor:'#e8dec4',height:'70vh'}}>
     <div className="padding">
         <div className="row container d-flex justify-content-center">
 <div className="col-xl-6 col-md-12">

@@ -112,7 +112,7 @@ function Food(){
         {/* <Navbar /> */}
         {!data?(
                     <section className="food-section position-relative">
-                    <h3  style={{color: '#4F6D7A'}}>Enjoy your meal<FaHandHoldingHeart style={{ marginLeft: '0.5rem', marginBottom:'0.5rem' }}/></h3>
+                    <h3 class="enjoy-h3 d-flex justify-content-center" style={{color: '#4F6D7A'}}>Enjoy your meal<FaHandHoldingHeart style={{ marginLeft: '0.5rem', marginBottom:'0.5rem' }}/></h3>
                     <div class="plate-container col-md-6 justify-content-center mt-4">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="20"

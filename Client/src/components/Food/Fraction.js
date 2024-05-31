@@ -248,8 +248,14 @@ function Fraction({props}){
 
 
                 {/* <button className="button-disapear" style={{margin:'auto'}}>Next</button> */}
-                <button onClick={handleDisapear}
-                type="button" class="btn btn-light mt-2 button-disapear">Next</button>
+                <div class="row">
+                    <div class="col text-center">
+                        <button onClick={handleDisapear}
+                                type="button" class="btn btn-light mt-2 button-disapear">Next</button>
+                    </div>
+                </div>
+                {/* <button onClick={handleDisapear}
+                type="button" class="btn btn-light mt-2 button-disapear">Next</button> */}
 
                     {tableVisible && (
                         <table className="table table-hover mt-2 custom-table" style={{ maxWidth: '80%', margin: 'auto', backgroundColor: '#C0D6DF' }}>

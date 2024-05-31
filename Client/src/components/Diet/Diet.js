@@ -82,11 +82,11 @@ function Diet(){
         <>
             {/* <Navbar/> */}
             <section className="back-page">
-                <div className="container diet-section">
+                <div className="container diet-section ">
 
-                <div class="gender-container justify-content-center">
-                <p style={{color:'#DD6E42 ',fontSize:'20px'}} className=""> Choose Your Gender & Enter Your Fat Percentage </p>
-                        <div class="form-check form-check-inline">
+                <div class="gender-container justify-content-center text-center">
+                <p style={{color:'#DD6E42 ',fontSize:'20px'}} className=" mt-2"> Choose Your Gender & Enter Your Fat Percentage </p>
+                        <div class="form-check form-check-inline ">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="female"
                             onChange={handleGenderChange} style={{ opacity: "0" }}></input>
                             <label class="form-check-label" for="inlineRadio1">
@@ -116,7 +116,12 @@ function Diet(){
                             </div>
                         </div>
                     </div>
-                    <button onClick={handleDoneInput} class="done-button mt-3">Done</button>
+                    <div class="row">
+                        <div class="col text-center">
+                            <button onClick={handleDoneInput} class="done-button mt-3 mb-1">Done</button>
+                        </div>
+                    </div>
+                    {/* <button onClick={handleDoneInput} class="done-button mt-3">Done</button> */}
 
                     {/* gain weight */}
                     {/* Conditionally render the table based on checkGender and fatPercentage */}
