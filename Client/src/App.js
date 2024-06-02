@@ -12,6 +12,7 @@ import Layout from './components/Layout/Layout';
 import Guest from './components/Guest/Guest';
 import Body from './components/Body/Body';
 import Profile from './components/Profile/Profile';
+import Workout from './components/Workout/Workout';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
     {path: '/food', element:<Food/>},
     {path: '/login', element:<Login/>},
     {path: '/signup', element:<Signup/>},
-    // {path: '/workout', element:<Workout/>},
+    {path: '/workout', element:<Workout/>},
   
       ]
   
